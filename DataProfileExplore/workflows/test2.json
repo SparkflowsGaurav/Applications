@@ -176,18 +176,7 @@
       "engine": "all"
     }
   ],
-  "edges": [
-    {
-      "source": "1",
-      "target": "3",
-      "id": 1
-    },
-    {
-      "source": "3",
-      "target": "2",
-      "id": 2
-    }
-  ],
+  "edges": [],
   "dataSetDetails": [
     {
       "id": 125,
