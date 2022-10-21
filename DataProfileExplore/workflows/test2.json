@@ -9,8 +9,8 @@
       "description": "This Node creates a DataFrame by reading data from HDFS, HIVE etc. The dataset has been defined earlier in Fire by using the Dataset Feature. As a user, you just have to select the Dataset of your interest.",
       "type": "dataset",
       "nodeClass": "fire.nodes.dataset.NodeDatasetStructured",
-      "x": "318px",
-      "y": "152px",
+      "x": "295px",
+      "y": "160px",
       "fields": [
         {
           "name": "storageLevel",
@@ -58,8 +58,8 @@
       "description": "Prints the specified number of records in the DataFrame. It is useful for seeing intermediate output",
       "type": "transform",
       "nodeClass": "fire.nodes.util.NodePrintFirstNRows",
-      "x": "498px",
-      "y": "136px",
+      "x": "561px",
+      "y": "105px",
       "fields": [
         {
           "name": "storageLevel",
@@ -125,13 +125,67 @@
         }
       ],
       "engine": "all"
+    },
+    {
+      "id": "3",
+      "name": "Drop Columns",
+      "description": "This node creates a new DataFrame by dropping the specified columns",
+      "type": "transform",
+      "nodeClass": "fire.nodes.etl.NodeDropColumns",
+      "x": "517px",
+      "y": "240px",
+      "fields": [
+        {
+          "name": "storageLevel",
+          "value": "DEFAULT",
+          "widget": "array",
+          "title": "Output Storage Level",
+          "description": "Storage Level of the Output Datasets of this Node",
+          "optionsArray": [
+            "DEFAULT",
+            "NONE",
+            "DISK_ONLY",
+            "DISK_ONLY_2",
+            "MEMORY_ONLY",
+            "MEMORY_ONLY_2",
+            "MEMORY_ONLY_SER",
+            "MEMORY_ONLY_SER_2",
+            "MEMORY_AND_DISK",
+            "MEMORY_AND_DISK_2",
+            "MEMORY_AND_DISK_SER",
+            "MEMORY_AND_DISK_SER_2",
+            "OFF_HEAP"
+          ],
+          "required": false,
+          "display": true,
+          "editable": true,
+          "disableRefresh": false
+        },
+        {
+          "name": "dropCols",
+          "value": "[\"LotFrontage\",\"LandSlope\",\"LandContour\",\"BldgType\"]",
+          "widget": "variables",
+          "title": "Columns",
+          "description": "The columns to be excluded from the output DataFrame",
+          "required": false,
+          "display": true,
+          "editable": true,
+          "disableRefresh": false
+        }
+      ],
+      "engine": "all"
     }
   ],
   "edges": [
     {
       "source": "1",
-      "target": "2",
+      "target": "3",
       "id": 1
+    },
+    {
+      "source": "3",
+      "target": "2",
+      "id": 2
     }
   ],
   "dataSetDetails": [
