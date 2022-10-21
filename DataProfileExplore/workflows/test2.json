@@ -125,13 +125,67 @@
         }
       ],
       "engine": "all"
+    },
+    {
+      "id": "3",
+      "name": "Drop Columns",
+      "description": "This node creates a new DataFrame by dropping the specified columns",
+      "type": "transform",
+      "nodeClass": "fire.nodes.etl.NodeDropColumns",
+      "x": "415px",
+      "y": "209px",
+      "fields": [
+        {
+          "name": "storageLevel",
+          "value": "DEFAULT",
+          "widget": "array",
+          "title": "Output Storage Level",
+          "description": "Storage Level of the Output Datasets of this Node",
+          "optionsArray": [
+            "DEFAULT",
+            "NONE",
+            "DISK_ONLY",
+            "DISK_ONLY_2",
+            "MEMORY_ONLY",
+            "MEMORY_ONLY_2",
+            "MEMORY_ONLY_SER",
+            "MEMORY_ONLY_SER_2",
+            "MEMORY_AND_DISK",
+            "MEMORY_AND_DISK_2",
+            "MEMORY_AND_DISK_SER",
+            "MEMORY_AND_DISK_SER_2",
+            "OFF_HEAP"
+          ],
+          "required": false,
+          "display": true,
+          "editable": true,
+          "disableRefresh": false
+        },
+        {
+          "name": "dropCols",
+          "value": "[\"Street\",\"LandContour\",\"LotFrontage\",\"Neighborhood\",\"Utilities\"]",
+          "widget": "variables",
+          "title": "Columns",
+          "description": "The columns to be excluded from the output DataFrame",
+          "required": false,
+          "display": true,
+          "editable": true,
+          "disableRefresh": false
+        }
+      ],
+      "engine": "all"
     }
   ],
   "edges": [
     {
       "source": "1",
-      "target": "2",
+      "target": "3",
       "id": 1
+    },
+    {
+      "source": "3",
+      "target": "2",
+      "id": 2
     }
   ],
   "dataSetDetails": [
