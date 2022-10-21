@@ -1,0 +1,92 @@
+{
+  "name": "Test",
+  "uuid": "b68fd1d7-1077-4aa2-87b4-de3a5c065dd5",
+  "category": "",
+  "description": "",
+  "parameters": "",
+  "nodes": [
+    {
+      "id": "1",
+      "path": "/08-Workflow/",
+      "name": "test2",
+      "description": "This node allow user to select the workflows in a project to create pipeline.",
+      "details": "",
+      "examples": "",
+      "type": "workflow",
+      "nodeClass": "fire.pipelineNodes.Workflow",
+      "x": "309px",
+      "y": "200px",
+      "fields": [
+        {
+          "name": "workflowUUID",
+          "value": "7dca2023-df9c-4b1e-a2f1-93477de6f83b",
+          "widget": "workflow",
+          "title": "Workflow UUID",
+          "description": "List of Workflows",
+          "required": true,
+          "display": true,
+          "editable": true,
+          "expandable": false,
+          "disableRefresh": false
+        },
+        {
+          "name": "notes",
+          "value": "",
+          "widget": "textfield",
+          "title": "Notes",
+          "description": "Notes",
+          "required": false,
+          "display": true,
+          "editable": true,
+          "expandable": false,
+          "disableRefresh": false
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "path": "/08-Workflow/",
+      "name": "Test",
+      "description": "This node allow user to select the workflows in a project to create pipeline.",
+      "details": "",
+      "examples": "",
+      "type": "workflow",
+      "nodeClass": "fire.pipelineNodes.Workflow",
+      "x": "495px",
+      "y": "300px",
+      "fields": [
+        {
+          "name": "workflowUUID",
+          "value": "246bd24a-29a7-4325-9811-98bfee9a07d0",
+          "widget": "workflow",
+          "title": "Workflow UUID",
+          "description": "List of Workflows",
+          "required": true,
+          "display": true,
+          "editable": true,
+          "expandable": false,
+          "disableRefresh": false
+        },
+        {
+          "name": "notes",
+          "value": "",
+          "widget": "textfield",
+          "title": "Notes",
+          "description": "Notes",
+          "required": false,
+          "display": true,
+          "editable": true,
+          "expandable": false,
+          "disableRefresh": false
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "1",
+      "target": "2",
+      "id": 1
+    }
+  ]
+}
