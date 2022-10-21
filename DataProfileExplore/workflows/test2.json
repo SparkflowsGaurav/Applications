@@ -1,6 +1,6 @@
 {
   "name": "test2",
-  "uuid": "9ea316a0-5f65-494e-bae9-d04136eb764a",
+  "uuid": "08f3680c-e9a3-4ac8-be79-27f45769028b",
   "category": "-",
   "nodes": [
     {
@@ -9,8 +9,8 @@
       "description": "This Node creates a DataFrame by reading data from HDFS, HIVE etc. The dataset has been defined earlier in Fire by using the Dataset Feature. As a user, you just have to select the Dataset of your interest.",
       "type": "dataset",
       "nodeClass": "fire.nodes.dataset.NodeDatasetStructured",
-      "x": "273px",
-      "y": "212px",
+      "x": "318px",
+      "y": "152px",
       "fields": [
         {
           "name": "storageLevel",
@@ -58,8 +58,8 @@
       "description": "Prints the specified number of records in the DataFrame. It is useful for seeing intermediate output",
       "type": "transform",
       "nodeClass": "fire.nodes.util.NodePrintFirstNRows",
-      "x": "493px",
-      "y": "204px",
+      "x": "498px",
+      "y": "136px",
       "fields": [
         {
           "name": "storageLevel",
